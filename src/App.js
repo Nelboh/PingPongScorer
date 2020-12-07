@@ -33,7 +33,8 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
     </div>
 
     { /* winner message */}
-    <h2 className="alert alert-success" style={{ display: winner === 0 ? "none" : "block" }}>Player {winner} wins!</h2>
+    {/* <h2 className="alert alert-success" style={{ display: winner === 0 ? "none" : "block" }}>Player {winner} wins!</h2> */}
+    <h2 className={winner === 0 ? "d-none" : "alert alert-success"}>Player {winner} wins!</h2>
 
     <hr />
 

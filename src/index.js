@@ -41,8 +41,8 @@ const render = () => {
       <App
         player1={state.player1}
         player2={state.player2}
-        onIncrement={() => store.dispatch({ type: "P1SCORES" })}
-        onIncrement={() => store.dispatch({ type: "P2SCORES" })
+        handlePlayer1={() => store.dispatch({ type: "P1SCORES" })}
+        handlePlayer2={() => store.dispatch({ type: "P2SCORES" })
         }
       />
     </React.StrictMode>,

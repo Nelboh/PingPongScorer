@@ -1,7 +1,8 @@
-import Header from "./subcomponents/header";
-import Reset from "./subcomponents/reset";
-import Winner from "./subcomponents/winner";
-import Scorecard from "./subcomponents/scorecard";
+import Header from "./components/header";
+import Reset from "./components/reset";
+import Winner from "./components/winner";
+import P1scorecard from "./components/scorecard/player1";
+import P2scorecard from "./components/scorecard/player2";
 
 const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
   <>
@@ -13,9 +14,9 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
     <Header />
 
     <div className="row mb-4" >
-      <Scorecard label={"Player 1"} playerProps={player1} serverProps={p1Serving} handlePlayerProps={handlePlayer1} winner={winner} />
+      <P1scorecard handlePlayerProps={handlePlayer1} />
 
-      <Scorecard label={"Player 2"} playerProps={player2} serverProps={!p1Serving} handlePlayerProps={handlePlayer2} winner={winner} />
+      <P2scorecard handlePlayerProps={handlePlayer2} />
     </div>
 
     {/* scores */}
@@ -51,7 +52,7 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
     { /* SECOND VERSION OF WINNER */}
     {/* <h2 className={winner === 0 ? "d-none" : "alert alert-success"}>Player {winner} wins!</h2> */}
 
-    <Winner winnerProps={winner} />
+    <Winner />
 
     <hr />
 

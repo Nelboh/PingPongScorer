@@ -3,24 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from "redux";
+// import { createStore } from "redux";
 import store from "./data/store";
+import { Provider } from "react-redux";
 
 const render = () => {
   let state = store.getState();
 
   ReactDOM.render(
     <React.StrictMode>
-      <App
-        player1={state.player1}
-        player2={state.player2}
-        p1Serving={state.p1Serving}
-        winner={state.winner}
-        handlePlayer1={() => store.dispatch({ type: "P1SCORES" })}
-        handlePlayer2={() => store.dispatch({ type: "P2SCORES" })}
-        handleReset={() => store.dispatch({ type: "RESET" })}
+      <Provider store={store}>
+        <App
+          player1={state.player1}
+          player2={state.player2}
+          p1Serving={state.p1Serving}
+          winner={state.winner}
+          handlePlayer1={() => store.dispatch({ type: "P1SCORES" })}
+          handlePlayer2={() => store.dispatch({ type: "P2SCORES" })}
+          handleReset={() => store.dispatch({ type: "RESET" })}
 
-      />
+        />
+      </Provider>
     </React.StrictMode>,
     document.getElementById('root')
   );

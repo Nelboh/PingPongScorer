@@ -19,6 +19,7 @@ const winner = state => {
     return { ...state, winner: 0 }
 }
 
+
 let reducer = (state, action) => { // this takes the current state of the app, applies an action to change it, then returns a valid copy of the new state.
 
     switch (action.type) {

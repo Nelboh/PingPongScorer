@@ -1,4 +1,5 @@
 import Header from "./subcomponents/header";
+import Reset from "./subcomponents/reset";
 
 const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
   <>
@@ -42,8 +43,10 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
 
     <hr />
 
-    { /* reset button */}
-    <button className="btn btn-danger" onClick={handleReset}>Reset</button>
+    <Reset resetProps={handleReset} />
+
+    {/* { /* reset button */}
+    {/* <button className="btn btn-danger" onClick={handleReset}>Reset</button> */}
   </>
 );
 

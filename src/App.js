@@ -1,9 +1,13 @@
+import Header from "./subcomponents/header";
+
 const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
   <>
-    {/* header */}
+    {/* header
     <header className="jumbotron mt-4 mb-0">
       <h1>PongPing</h1>
-    </header>
+    </header> */}
+
+    <Header />
 
     {/* scores */}
     <div className="row mb-4">

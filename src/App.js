@@ -12,9 +12,11 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
 
     <Header />
 
-    <Scorecard label={"Player 1"} playerProps={player1} serverProps={p1Serving} handlePlayerProps={handlePlayer1} />
+    <div className="row mb-4" >
+      <Scorecard label={"Player 1"} playerProps={player1} serverProps={p1Serving} handlePlayerProps={handlePlayer1} />
 
-    <Scorecard label={"Player 2"} playerProps={player2} serverProps={!p1Serving} handlePlayerProps={handlePlayer2} />
+      <Scorecard label={"Player 2"} playerProps={player2} serverProps={!p1Serving} handlePlayerProps={handlePlayer2} />
+    </div>
 
     {/* scores */}
     {/* <div className="row mb-4">

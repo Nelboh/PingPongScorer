@@ -1,5 +1,6 @@
 import Header from "./subcomponents/header";
 import Reset from "./subcomponents/reset";
+import Winner from "./subcomponents/winner";
 
 const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
   <>
@@ -37,9 +38,13 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
       </div>
     </div>
 
-    { /* winner message */}
+    { /* FIRST VERSION OF WINNER */}
     {/* <h2 className="alert alert-success" style={{ display: winner === 0 ? "none" : "block" }}>Player {winner} wins!</h2> */}
-    <h2 className={winner === 0 ? "d-none" : "alert alert-success"}>Player {winner} wins!</h2>
+
+    { /* SECOND VERSION OF WINNER */}
+    {/* <h2 className={winner === 0 ? "d-none" : "alert alert-success"}>Player {winner} wins!</h2> */}
+
+    <Winner winnerProps={winner} />
 
     <hr />
 

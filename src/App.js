@@ -1,6 +1,7 @@
 import Header from "./subcomponents/header";
 import Reset from "./subcomponents/reset";
 import Winner from "./subcomponents/winner";
+import Scorecard from "./subcomponents/scorecard";
 
 const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
   <>
@@ -11,8 +12,12 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
 
     <Header />
 
+    <Scorecard label={"Player 1"} playerProps={player1} serverProps={p1Serving} handlePlayerProps={handlePlayer1} />
+
+    <Scorecard label={"Player 2"} playerProps={player2} serverProps={!p1Serving} handlePlayerProps={handlePlayer2} />
+
     {/* scores */}
-    <div className="row mb-4">
+    {/* <div className="row mb-4">
       <div className="col-md-6 mt-4">
         <div className={p1Serving ? "card text-center bg-dark text-white" : "card text-center"}>
           <h5 className="card-header">Player 1</h5>
@@ -36,7 +41,7 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
 
     { /* FIRST VERSION OF WINNER */}
     {/* <h2 className="alert alert-success" style={{ display: winner === 0 ? "none" : "block" }}>Player {winner} wins!</h2> */}
@@ -50,7 +55,7 @@ const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Se
 
     <Reset resetProps={handleReset} />
 
-    {/* { /* reset button */}
+
     {/* <button className="btn btn-danger" onClick={handleReset}>Reset</button> */}
   </>
 );

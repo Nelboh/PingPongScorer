@@ -16,7 +16,7 @@ const winner = state => {
             winner: 2
         }
     }
-    return { ...state, winner: 0 }
+    return state;
 }
 
 

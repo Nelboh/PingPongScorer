@@ -17,3 +17,5 @@ export const reset = () => {
         type: "RESET",
     }
 }
+
+// need to add another action (maybe more than one) for form

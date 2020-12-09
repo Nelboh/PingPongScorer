@@ -3,9 +3,14 @@ import Reset from "./components/reset";
 import Winner from "./components/winner";
 import P1scorecard from "./components/scorecard/player1";
 import P2scorecard from "./components/scorecard/player2";
+import Form from "./components/Form/Form";
+
 
 const App = () => (
   <>
+    <Header />
+
+    <Form />
 
     <Header />
 

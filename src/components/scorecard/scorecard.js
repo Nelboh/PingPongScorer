@@ -8,7 +8,7 @@ const Scorecard = ({ playerProps, serverProps, handleScore, label, winner }) => 
                 <p className="card-text display-1">{playerProps}</p>
             </div>
             <div className="card-footer">
-                <button disabled={winner === 0 ? false : true} className="form-control btn btn-success" onClick={handleScore}>+</button>
+                <button disabled={winner !== 0} className="form-control btn btn-success" onClick={handleScore}>+</button>
             </div>
         </div>
     </div>

@@ -15,10 +15,7 @@ const render = () => {
       {/*  We give the provider the store so it has access to Redux */}
       <Provider store={store}>
         <App
-          player1={state.player1}
-          player2={state.player2}
-          p1Serving={state.p1Serving}
-          winner={state.winner}
+
           handlePlayer1={() => store.dispatch({ type: "P1SCORES" })}
           handlePlayer2={() => store.dispatch({ type: "P2SCORES" })}
           handleReset={() => store.dispatch({ type: "RESET" })}

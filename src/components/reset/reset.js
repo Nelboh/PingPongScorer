@@ -1,7 +1,7 @@
-const Reset = ({ resetProps }) => (
+const Reset = ({ handleReset }) => (
     <button
         className="btn btn-danger"
-        onClick={resetProps}
+        onClick={handleReset}
     >
         Reset
     </button>

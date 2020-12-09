@@ -4,22 +4,22 @@ import Winner from "./components/winner";
 import P1scorecard from "./components/scorecard/player1";
 import P2scorecard from "./components/scorecard/player2";
 
-const App = ({ player1, player2, handlePlayer1, handlePlayer2, handleReset, p1Serving, winner }) => (
+const App = () => (
   <>
 
     <Header />
 
     <div className="row mb-4" >
-      <P1scorecard handlePlayerProps={handlePlayer1} />
+      <P1scorecard />
 
-      <P2scorecard handlePlayerProps={handlePlayer2} />
+      <P2scorecard />
     </div>
 
     <Winner />
 
     <hr />
 
-    <Reset resetProps={handleReset} />
+    <Reset />
 
   </>
 );

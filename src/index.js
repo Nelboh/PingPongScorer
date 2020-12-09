@@ -12,6 +12,7 @@ const render = () => {
 
   ReactDOM.render(
     <React.StrictMode>
+      {/*  We give the provider the store so it has access to Redux */}
       <Provider store={store}>
         <App
           player1={state.player1}

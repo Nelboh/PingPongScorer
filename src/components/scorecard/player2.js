@@ -6,8 +6,8 @@ const mapStateToProps = (state) => {
     return {
         winner: state.winner,
         playerProps: state.player2,
-        serverProps: state.p2Serving,
-        label: "Player 2",
+        serverProps: !state.p1Serving,
+        label: state.player2Name,
     }
 }
 

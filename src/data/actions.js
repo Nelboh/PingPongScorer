@@ -18,4 +18,16 @@ export const reset = () => {
     }
 }
 
+export const saveSettings = ({ player1, player2, winningScore, alternate }) => {
+
+    return {
+        type: "SAVE_SETTINGS",
+        player1: player1,
+        player2: player2,
+        winningScore: +winningScore,
+        alternate: +alternate,
+    }
+
+}
+
 // need to add another action (maybe more than one) for form

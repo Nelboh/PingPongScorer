@@ -3,7 +3,7 @@ import Reset from "../reset";
 import Winner from "../winner";
 import P1scorecard from "../scorecard/player1";
 import P2scorecard from "../scorecard/player2";
-import Form from "../Form/Form";
+import Form from "../Form";
 
 
 const App = ({ gameStarted }) => (

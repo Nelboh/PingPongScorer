@@ -39,7 +39,7 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.handleSubmit({ ...this.state });
+        this.props.handleStart({ ...this.state });
     }
 
     render() {
@@ -75,7 +75,7 @@ class Form extends Component {
                     handleChange={this.handleAlternate}
                 />
 
-                <button class="btn btn-warning" type="button">Submit</button>
+                <button class="btn btn-warning" type="submit">Submit</button>
             </form>
         );
     }

@@ -29,17 +29,17 @@ class Form extends Component {
         this.setState({ player2: e.currentTarget.value });
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-        this.props.handleSubmit({ ...this.state });
-    }
-
     handleScore = (e) => {
         this.setState({ winningScore: e.currentTarget.value });
     }
 
     handleAlternate = (e) => {
         this.setState({ alternate: e.currentTarget.value });
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.handleSubmit({ ...this.state });
     }
 
     render() {

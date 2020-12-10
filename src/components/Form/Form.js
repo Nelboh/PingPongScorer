@@ -8,10 +8,10 @@ class Form extends Component {
 
         // set the state for both input boxes to be empty at first
         this.state = {
-            player1: "",
-            player2: "",
-            winningScore: 21,
-            alternate: 5,
+            player1: this.props.player1Name,
+            player2: this.props.player2Name,
+            winningScore: this.props.winningScore,
+            alternate: this.props.alternate,
         };
 
         this.handlePlayer1 = this.handlePlayer1.bind(this);

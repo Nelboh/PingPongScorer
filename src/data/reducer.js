@@ -41,7 +41,13 @@ let reducer = (state, action) => { // this takes the current state of the app, a
 
         case "P2SCORES": return winner(server(player2(state)));
 
-        case "RESET": return initial;
+        case "RESET": return {
+            ...initial,
+            player1Name: state.player1Name,
+            player2Name: state.player2Name,
+            winningScore: state.winningScore,
+            alternate: state.alternate,
+        };
 
         case "SAVE_SETTINGS": return saveSettings(state, action);
 

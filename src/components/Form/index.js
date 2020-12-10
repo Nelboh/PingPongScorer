@@ -5,10 +5,10 @@ import { saveSettings } from "../../data/actions";
 const mapStateToProps = (state) => {
     return {
 
-        player1: state.player1,
-        player2: state.player2,
         winningScore: state.winningScore,
         alternate: state.alternate,
+        player1Name: state.player1Name,
+        player2Name: state.player2Name,
     }
 }
 

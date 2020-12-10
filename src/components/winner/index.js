@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 // don't worry about how state is connected here, just accept that it is
 const mapStateToProps = (state) => {
     return {
-        winnerProps: state.winner
+        winnerProps: state.winner,
+        victorName: state.winner === 1 ? state.player1Name : state.player2Name
     }
 }
 

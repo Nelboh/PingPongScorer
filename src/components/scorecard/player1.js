@@ -1,13 +1,13 @@
 import scorecard from "./scorecard";
 import { connect } from "react-redux";
-import { p1scores } from "../../data/actions";
+import { p1scores } from "../../data/actions/api";
 
 const mapStateToProps = (state) => {
     return {
-        winner: state.winner,
-        playerProps: state.player1,
-        serverProps: state.p1Serving,
-        label: state.player1Name,
+        winner: state.complete, // API property name is complete
+        playerProps: state.player_1.score,
+        serverProps: state.player_1.serving,
+        label: state.player_1.name,
     }
 }
 

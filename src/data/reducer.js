@@ -1,3 +1,4 @@
+
 import initial from "./initial";
 
 
@@ -32,6 +33,14 @@ const saveSettings = (state, { player1, player2, winningScore, alternate }) => {
 
 }
 
+const updateState = (state, action) => {
+    return {
+        ...state,
+        ...action.data.data,
+        gameStarted: true,
+    }
+}
+
 
 let reducer = (state, action) => { // this takes the current state of the app, applies an action to change it, then returns a valid copy of the new state.
 
@@ -50,6 +59,8 @@ let reducer = (state, action) => { // this takes the current state of the app, a
         };
 
         case "SAVE_SETTINGS": return saveSettings(state, action);
+
+        case "UPDATE_STATE": return updateState(state, action);
 
         default: return state; // your default returns the state unchanged.
     }

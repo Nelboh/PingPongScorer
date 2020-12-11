@@ -1,6 +1,6 @@
 import scorecard from "./scorecard";
 import { connect } from "react-redux";
-import { p2scores } from "../../data/actions";
+import { p2scores } from "../../data/actions/state";
 
 const mapStateToProps = (state) => {
     return {

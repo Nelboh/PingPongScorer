@@ -30,4 +30,11 @@ export const saveSettings = ({ player1, player2, winningScore, alternate }) => {
 
 }
 
+export const updateState = (data) => {
+    return {
+        type: "UPDATE_STATE",
+        data: data,
+    }
+}
+
 // need to add another action (maybe more than one) for form

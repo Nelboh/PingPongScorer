@@ -14,3 +14,16 @@ export const postGame = (settings) => {
         })
     }
 }
+
+export const patchGame = (playerProps) => {
+    return (dispatch, getState) => {
+        // returns the id of the created game
+        let id = getState().id
+        // patches the score to the game with that id every time it updates
+        axios.patch(`/games/${id}/score`, {
+            player: playerProps,
+        }).then(({ data }) => {
+            dispatch(updateState(data.data))
+        })
+    }
+}
